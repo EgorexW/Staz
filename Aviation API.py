@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 @app.get("/flights")
-def GetFlightsData():
+def GetFlightsApi():
     args = request.args
     departure = args.get("departure", default="", type=str)
     arrival = args.get("arrival", default="", type=str)
@@ -51,6 +51,8 @@ def PrintFlights(flights):
             output += u'\n'
     return output
 
+
+# Testing code
 
 DEPARTURE = 'DRW'
 ARRIVAL = 'DPS'
